@@ -4,7 +4,15 @@ public void setup() {
 }
 
 public void draw() {
-  if (keyCode == UP) {
+    if (keyCode == UP) {
+    background(0);
+    for (int i = -400; i < 900; i+=400) {
+      for (int y = -400; y < 900; y+=400) {
+        sierpinski(i, y, 400);
+      }
+    }
+  }
+  if (keyCode == RIGHT) {
     background(0);
     for (int i = -200; i < 800; i+=200) {
       for (int y = -200; y < 800; y+=200) {
@@ -12,7 +20,7 @@ public void draw() {
       }
     }
   }
-  if (keyCode == RIGHT) {
+  if (keyCode == LEFT) {
     background(0);
     for (int i = -200; i < 800; i+=100) {
       for (int y = -200; y < 800; y+=100) {
@@ -20,7 +28,7 @@ public void draw() {
       }
     }
   }
-  if (keyCode == LEFT) {
+  if (keyCode == DOWN) {
     background(0);
     for (int i = -200; i < 800; i+=50) {
       for (int y = -200; y < 800; y+=50) {
